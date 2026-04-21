@@ -65,6 +65,17 @@ export default function ContactForm() {
         <label htmlFor="message" className="block text-brand-text-primary font-body font-semibold text-sm mb-2">Describe the Issue</label>
         <textarea id="message" rows={4} className="w-full px-4 py-3 border border-brand-border rounded-lg font-body text-brand-text-primary placeholder-brand-text-muted focus:outline-none focus:ring-2 focus:ring-brand-primary/40 focus:border-brand-primary transition-colors resize-none" style={{ backgroundColor: '#FEFDF8' }} placeholder="What's happening? System age, symptoms, anything relevant..." />
       </div>
+      <div className="flex items-start gap-3 pt-1">
+        <input
+          id="consent"
+          type="checkbox"
+          required
+          className="mt-1 w-4 h-4 rounded border-brand-border text-brand-primary focus:ring-brand-primary/40 shrink-0"
+        />
+        <label htmlFor="consent" className="text-brand-text-secondary font-body text-xs leading-relaxed">
+          I consent to receive calls and SMS from this business. Message and data rates may apply. Reply STOP to unsubscribe.
+        </label>
+      </div>
       <button type="submit" className="w-full bg-brand-accent hover:bg-brand-accent-hover text-white font-body font-semibold py-4 rounded-lg transition-colors text-base">Request My Free Estimate</button>
       <p className="text-center text-brand-text-muted font-body text-xs">For active emergencies, call (502) 555-0174 directly — 24/7.</p>
     </form>
