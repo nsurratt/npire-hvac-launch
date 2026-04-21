@@ -4,17 +4,11 @@ const footerLinks = {
   services: [
     { label: 'AC Repair', href: '/ac-repair' },
     { label: 'AC Installation', href: '/ac-installation' },
-    { label: 'Heating', href: '/heating' },
-    { label: 'Maintenance Plans', href: '/maintenance-plans' },
-    { label: 'Indoor Air Quality', href: '/indoor-air-quality' },
-    { label: 'Financing', href: '/financing' },
   ],
   company: [
     { label: 'About Us', href: '/about' },
-    { label: 'Before & After', href: '/before-after' },
     { label: 'Service Areas', href: '/service-areas' },
     { label: 'Reviews', href: '/reviews' },
-    { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/contact' },
   ],
 }
