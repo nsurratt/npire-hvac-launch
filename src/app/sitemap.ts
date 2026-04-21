@@ -1,5 +1,4 @@
 import type { MetadataRoute } from 'next'
-import { serviceAreaDetails } from '@/content/home'
 
 const BASE_URL = 'https://hometownheatingair.com'
 
@@ -7,14 +6,9 @@ const routes = [
   { url: '/', priority: 1.0 },
   { url: '/ac-repair', priority: 0.9 },
   { url: '/ac-installation', priority: 0.9 },
-  { url: '/heating', priority: 0.9 },
-  { url: '/maintenance-plans', priority: 0.9 },
-  { url: '/indoor-air-quality', priority: 0.8 },
   { url: '/about', priority: 0.7 },
-  { url: '/before-after', priority: 0.7 },
   { url: '/service-areas', priority: 0.8 },
   { url: '/reviews', priority: 0.7 },
-  { url: '/faq', priority: 0.6 },
   { url: '/contact', priority: 0.8 },
 ]
 
@@ -26,12 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority,
   }))
 
-  const cityRoutes: MetadataRoute.Sitemap = serviceAreaDetails.map((area) => ({
-    url: `${BASE_URL}/service-areas/${area.city.toLowerCase().replace(/\s+/g, '-')}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
 
-  return [...staticRoutes, ...cityRoutes]
 }
