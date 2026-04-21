@@ -13,16 +13,10 @@ const routes = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = routes.map(({ url, priority }) => ({
+  return routes.map(({ url, priority }) => ({
     url: `${BASE_URL}${url}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority,
   }))
-
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }))
-
 }
